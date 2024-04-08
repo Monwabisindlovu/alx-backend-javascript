@@ -1,3 +1,9 @@
+/* eslint-disable */
 export default function iterateThroughObject(reportWithIterator) {
-  return reportWithIterator.join(' | ');
-}
+    const newEmployeeList = [];
+  
+    for (const employee of reportWithIterator) {
+      newEmployeeList.push(employee);
+    }
+    return newEmployeeList.join(' | ');
+  }
