@@ -1,15 +1,6 @@
-export function taskFirst() {
-    var task = 'I prefer const when I can.';
-    return task;
-}
+// This file contains the "Constants" some people also call them "types"
 
-export function getLast() {
-    return ' is okay';
-}
-
-export function taskNext() {
-    var combination = 'But sometimes let';
-    combination += getLast();
-
-    return combination;
-}
+    export const INCREMENT = 'INCREMENT'
+    export const DECREMENT = 'DECREMENT'
+    export const RESET = 'RESET'
+    export const INCREMENT_BY_INPUT = "INCREMENT_BY_INPUT"
