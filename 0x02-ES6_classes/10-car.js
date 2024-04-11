@@ -6,19 +6,39 @@ export default class Car {
     this._color = color;
   }
 
-  cloneCar() {
-    return new this.constructor(this._brand, this._motor, this._color);
-  }
-
-  getBrand() {
+  get brand() {
     return this._brand;
   }
 
-  getMotor() {
+  set brand(newBrand) {
+    return this._brand;
+  }
+
+  get motor() {
     return this._motor;
   }
 
-  getColor() {
+  set motor(newMotor) {
+    return this._motor;
+  }
+
+  get color() {
     return this._color;
+  }
+
+  set color(newColor) {
+    return this._color;
+  }
+
+  cloneCar() {
+    const newCar = new this.constructor();
+    for (const key in this) {
+      if (typeof this[key] === 'function') {
+        newCar[key] = this[key].bind(newCar);
+      } else {
+        newCar[key] = this[key];
+      }
+    }
+    return newCar;
   }
 }
