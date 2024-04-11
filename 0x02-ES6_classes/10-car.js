@@ -1,19 +1,24 @@
-const cloneCarSymbol = Symbol('cloneCar');
-
-class Car {
+// 10-car.js
+export default class Car {
   constructor(brand, motor, color) {
     this._brand = brand;
     this._motor = motor;
     this._color = color;
   }
 
-  cloneCarSymbol {
+  cloneCar() {
     return new this.constructor(this._brand, this._motor, this._color);
   }
 
-  cloneCar() {
-    return thiscloneCarSymbol;
+  getBrand() {
+    return this._brand;
+  }
+
+  getMotor() {
+    return this._motor;
+  }
+
+  getColor() {
+    return this._color;
   }
 }
-
-export default Car;

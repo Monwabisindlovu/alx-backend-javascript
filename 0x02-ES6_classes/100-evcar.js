@@ -1,16 +1,10 @@
 import Car from './10-car';
 
-class EVCar extends Car {
+export default class EVCar extends Car {
   constructor(brand, motor, color, range) {
-    super(brand, motor, color); // Call the parent class constructor
-    this._range = range; // Initialize range
+    super(brand, motor, color);
+    this._range = range;
   }
 
-  // Override the cloneCar method
-  cloneCar() {
-    // Return a new Car instance with undefined properties
-    return new this.constructor(undefined, undefined, undefined);
-  }
+  cloneCar() {}
 }
-
-export default EVCar;
