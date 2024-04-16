@@ -1,5 +1,4 @@
-function getStudentsByLocation(list, city) {
-  return list.filter(student => student.location === city);
+// 2-get_students_by_loc.js
+export default function getStudentsByLocation(studentList, city) {
+  return studentList.filter((student) => student.location === city);
 }
-
-export default getStudentsByLocation;
