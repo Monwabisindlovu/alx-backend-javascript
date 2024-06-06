@@ -1,17 +1,21 @@
-export const Utils = {
-  calculateNumber(type, a, b) {
-    const roundedA = Math.round(a);
-    const roundedB = Math.round(b);
+const Utils = {
+    calculateNumber(type, a, b) {
+    const firstInt = Math.round(a);
+    const secondInt = Math.round(b);
 
-    if (type === 'SUM') {
-      return roundedA + roundedB;
-    } else if (type === 'SUBTRACT') {
-      return roundedA - roundedB;
-    } else if (type === 'DIVIDE') {
-      if (roundedB === 0) {
-        return 'Error';
-      }
-      return roundedA / roundedB;
+    if (type === 'SUBTRACT') {
+        return firstInt - secondInt;
     }
-  }
+
+    if (type === 'DIVIDE') {
+        if (secondInt === 0) {
+        return 'Error';
+        }
+        return firstInt / secondInt;
+    }
+
+    return firstInt + secondInt;
+    }
 };
+
+module.exports = Utils;
