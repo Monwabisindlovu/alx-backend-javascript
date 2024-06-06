@@ -4,7 +4,7 @@
   "description": "0x06. Unittests in JS",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha '*.test.js'"
   },
   "keywords": [],
   "author": "",
@@ -13,3 +13,4 @@
     "mocha": "^10.4.0"
   }
 }
+
